@@ -6,6 +6,16 @@ public class Hero {
     int damage;
     int attackType;
 
+    public Hero() {
+    }
+
+    public Hero(String name, int hp, int damage, int attackType) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+        this.attackType = attackType;
+    }
+
     public void setName(String name){
      if(name.isEmpty()){
             System.out.println("Отсутствует герой!");

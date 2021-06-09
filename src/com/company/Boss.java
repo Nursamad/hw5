@@ -6,13 +6,20 @@ public class Boss {
     private int damage;
     private int defenceType;
 
+    public Boss (){}
+
+    public Boss(String name, int hp, int damage, int defenceType) {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+        this.defenceType = defenceType;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
-
         return name;
     }
 
@@ -38,5 +45,9 @@ public class Boss {
 
     public int getDamage() {
         return damage;
+    }
+    public void bossChangeDefence(int defenceType){
+    this.defenceType = defenceType;
+
     }
 }

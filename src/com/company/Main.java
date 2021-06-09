@@ -1,24 +1,20 @@
 package com.company;
 
+
 public class Main {
 
     public static void main(String[] args) {
+
+        Door door = new Door();
         Boss boss = new Boss();
-        boss.setName("Танос");
-        boss.setHp(500);
-        boss.setDamage(40);
-        boss.setDefenceType(15);
+        boss.bossChangeDefence(10);
+        boss = new Boss("Tanos" , 500 , 60 , 15);
 
-
-        Hero hero = new Hero();
-        hero.setName("Тор");
-        hero.setHp(200);
-        hero.setDamage(60);
-        hero.setAttackType(12);
-
-        System.out.println(hero.getName() + "\nЗдоровье: " + hero.getHp() + ";" + "\nУрон: " + hero.getDamage() + ";" + "\nТип атаки: " + hero.getAttackType() + ";");
-        System.out.println("________________________________");
-        System.out.println(boss.getName() + "\nЗдоровье: " + boss.getHp() + ";" + "\nУрон: " + boss.getDamage() + ";" + "\nТип защиты: " + boss.getDefenceType() + ";");
+        System.out.println(boss.getName() + ": " + "Health: " +boss.getHp() + ", " + "Damage: " + boss.getDamage() + ", " + "Defence type: " +boss.getDefenceType() + ";");
+        System.out.println("______________________________________________");
+        for (int i = 0; i < door.createHero().length; i++) {
+            System.out.println(door.createHero()[i].getName() + ": " + "Health: "+ door.createHero()[i].getHp() + ", " + "Damage: " +door.createHero()[i].getDamage() + ", " + "Attack type: " + door.createHero()[i].getAttackType() + ";");
+        }
 
     }
 }
